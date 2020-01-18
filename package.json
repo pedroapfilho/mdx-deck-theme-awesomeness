@@ -1,11 +1,14 @@
 {
   "name": "mdx-deck-theme-awesomeness",
-  "version": "1.0.1",
-  "main": "index.js",
+  "type": "module",
+  "version": "1.0.2",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "repository": "https://github.com/pedroapfilho/mdx-deck-theme-awesomeness.git",
   "author": "Pedro Filho <pedro@filho.me>",
   "license": "MIT",
-  "main": "dist/index.js",
   "scripts": {
     "build": "yarn clean; babel src -d dist",
     "clean": "rm -rf dist",
