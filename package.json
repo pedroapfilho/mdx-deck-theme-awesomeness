@@ -5,6 +5,7 @@
   "repository": "https://github.com/pedroapfilho/mdx-deck-theme-awesomeness.git",
   "author": "Pedro Filho <pedro@filho.me>",
   "license": "MIT",
+  "main": "dist/index.js",
   "scripts": {
     "build": "yarn clean; babel src -d dist",
     "clean": "rm -rf dist",
