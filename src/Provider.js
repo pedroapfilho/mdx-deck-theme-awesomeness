@@ -1,6 +1,8 @@
 import React from "react";
 import { useDeck } from "mdx-deck";
 
+import Steps from "./Steps";
+
 const Provider = props => {
   const state = useDeck();
 
@@ -10,17 +12,15 @@ const Provider = props => {
         fontFamily: `-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"`
       }}
     >
-      {props.children}
       <div
         style={{
-          position: "fixed",
-          right: 0,
-          bottom: 0,
-          margin: 16
+          width: "100vw",
+          height: "946px"
         }}
       >
-        {state.index + 1} - {state.length}
+        {props.children}
       </div>
+      <Steps length={state.length} position={state.index + 1} />
     </div>
   );
 };

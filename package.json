@@ -10,6 +10,7 @@
   "author": "Pedro Filho <pedro@filho.me>",
   "license": "MIT",
   "scripts": {
+    "start": "mdx-deck deck.mdx",
     "build": "yarn clean; babel src -d dist",
     "clean": "rm -rf dist",
     "prepublish": "yarn build"
