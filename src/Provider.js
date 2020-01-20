@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useDeck } from "mdx-deck";
 
 import Steps from "./Steps";
 
 const Provider = props => {
-  const state = useDeck();
+  const { length, index, mode } = useDeck();
+
+  const presenterMode = mode === "PRESENTER";
 
   return (
     <>
@@ -15,7 +17,7 @@ const Provider = props => {
       >
         {props.children}
       </main>
-      <Steps length={state.length} position={state.index + 1} />
+      {!presenterMode && <Steps length={length} position={index + 1} />}
     </>
   );
 };
