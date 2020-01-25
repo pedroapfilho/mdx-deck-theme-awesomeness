@@ -24,5 +24,8 @@
   },
   "peerDependencies": {
     "mdx-deck": "^3.0.13"
+  },
+  "dependencies": {
+    "styled-components": "^5.0.0"
   }
 }
