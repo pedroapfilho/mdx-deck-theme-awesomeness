@@ -12,7 +12,7 @@ const Container = styled.div`
 `;
 
 const Fade = styled.div`
-  animation: fadein 2s;
+  animation: fadein 1s;
 
   @keyframes fadein {
     from {
