@@ -14,13 +14,13 @@ const Container = styled.div`
 const Provider = ({ children, name, twitter }) => {
   const { length, index, mode } = useDeck();
 
-  const presenterMode = mode === "PRESENTER";
+  const normalMode = mode === "normal";
 
   return (
     <Container>
       {children}
 
-      {!presenterMode && (
+      {normalMode && (
         <>
           {name && twitter && <Profile name={name} twitter={twitter} />}
           <Steps length={length} position={index + 1} />
