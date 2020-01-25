@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const fillArrayWithNumbers = n => {
   const arr = Array.apply(null, Array(n));
-  return arr.map(function(x, i) {
+  return arr.map((_, i) => {
     return i;
   });
 };
@@ -49,16 +49,10 @@ const PacmanFood = styled.div`
 const Steps = ({ length, position }) => {
   return (
     <Container>
-      {fillArrayWithNumbers(position).map(
-        i =>
-          i === 0 && (
-            <PacmanBody key={`passed-${i}`}>
-              {!!(position % 2) && <PacmanMouth />}
-            </PacmanBody>
-          )
-      )}
+      <PacmanBody>{!!(position % 2) && <PacmanMouth />}</PacmanBody>
+
       {fillArrayWithNumbers(length - position).map(i => (
-        <PacmanFood key={`toPass-${i}`} />
+        <PacmanFood key={`food-${i}`} />
       ))}
     </Container>
   );
