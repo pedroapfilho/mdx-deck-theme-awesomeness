@@ -19,10 +19,10 @@ const Container = styled.div`
 `;
 
 const PacmanBody = styled.div`
-  height: 15px;
-  width: 15px;
+  height: 20px;
+  width: 20px;
   margin: 2px;
-  background-color: #000;
+  background-color: #ffcc33;
   border-radius: 50%;
   position: relative;
   border: none;
@@ -41,8 +41,8 @@ const PacmanFood = styled.div`
   height: 5px;
   width: 5px;
   margin: 2px;
-  background-color: #bbb;
-  border-radius: 50%;
+  background-color: #d49b7f;
+  border-radius: 1px;
   display: inline-block;
 `;
 

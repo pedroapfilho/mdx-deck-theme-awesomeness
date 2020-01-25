@@ -11,6 +11,19 @@ const Container = styled.div`
     "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
 `;
 
+const Fade = styled.div`
+  animation: fadein 2s;
+
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+`;
+
 const Provider = ({ children, name, twitter }) => {
   const { length, index, mode } = useDeck();
 
@@ -18,7 +31,7 @@ const Provider = ({ children, name, twitter }) => {
 
   return (
     <Container>
-      {children}
+      <Fade>{children}</Fade>
 
       {normalMode && (
         <>
