@@ -27,7 +27,7 @@ const Fade = styled.div`
 const Provider = ({ children, name, twitter }) => {
   const { length, index, mode } = useDeck();
 
-  const normalMode = mode === "normal";
+  const normalMode = mode.toLowerCase() === "normal";
 
   return (
     <Container>
