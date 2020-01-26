@@ -18,23 +18,33 @@ const Container = styled.div`
   z-index: 1;
 `;
 
-const PacmanBody = styled.div`
-  height: 20px;
-  width: 20px;
+const PacmanContainer = styled.div`
   margin: 2px;
-  background-color: #ffcc33;
-  border-radius: 50%;
-  position: relative;
-  border: none;
 `;
 
-const PacmanMouth = styled.div`
-  background: #fff;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  clip-path: polygon(120% 75%, 50% 50%, 120% 20%);
-  border: #fff;
+const PacmanUp = styled.div`
+  height: 10px;
+  width: 20px;
+  background-color: #ffcc33;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transform: rotate(-25deg);
+`;
+
+const PacmanDown = styled.div`
+  height: 10px;
+  width: 20px;
+  background-color: #ffcc33;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transform: rotate(25deg);
+`;
+
+const PacmanClosed = styled.div`
+  height: 20px;
+  width: 20px;
+  background-color: #ffcc33;
+  border-radius: 20px;
 `;
 
 const PacmanFood = styled.div`
@@ -49,7 +59,16 @@ const PacmanFood = styled.div`
 const Steps = ({ length, position }) => {
   return (
     <Container>
-      <PacmanBody>{!!(position % 2) && <PacmanMouth />}</PacmanBody>
+      <PacmanContainer>
+        {!!(position % 2) ? (
+          <>
+            <PacmanUp />
+            <PacmanDown />
+          </>
+        ) : (
+          <PacmanClosed />
+        )}
+      </PacmanContainer>
 
       {fillArrayWithNumbers(length - position).map(i => (
         <PacmanFood key={`food-${i}`} />
