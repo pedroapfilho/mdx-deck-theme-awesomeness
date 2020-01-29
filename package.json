@@ -1,7 +1,7 @@
 {
   "name": "mdx-deck-theme-awesomeness",
   "type": "module",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "main": "dist/index.js",
   "files": [
     "dist"
