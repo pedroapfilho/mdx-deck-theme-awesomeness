@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -50,4 +50,4 @@ const Profile = ({ name, twitter }) => {
   );
 };
 
-export default Profile;
+export default memo(Profile);
