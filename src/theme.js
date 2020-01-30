@@ -13,7 +13,8 @@ const theme = ({ name, twitter }) => {
   return {
     styles: {
       Slide: {
-        fontFamily: "inherit"
+        fontFamily: "inherit",
+        textAlign: "center"
       },
       code: {
         fontSize: "0.5em"
