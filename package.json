@@ -26,6 +26,6 @@
     "mdx-deck": "^3.0.13"
   },
   "dependencies": {
-    "styled-components": "^5.0.0"
+    "styled-components": "^5.0.1"
   }
 }
