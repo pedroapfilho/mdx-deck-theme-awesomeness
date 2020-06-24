@@ -1,3 +1,5 @@
+import { themes } from "mdx-deck";
+
 const awesomeTheme = {
   fonts: {
     body:
@@ -37,6 +39,7 @@ const awesomeTheme = {
       fontSize: "0.25em",
     },
   },
+  ...themes.prism,
 };
 
 export default awesomeTheme;
