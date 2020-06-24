@@ -1,3 +1,5 @@
-import theme from "./theme";
+import awesomeTheme from "./awesomeTheme";
+import Profile from "./Profile";
+import Pacman from "./Pacman";
 
-export default theme;
+export { awesomeTheme, Profile, Pacman };

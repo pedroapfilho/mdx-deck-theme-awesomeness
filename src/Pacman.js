@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import { useDeck } from "mdx-deck";
 
-const fillArrayWithNumbers = n => {
+const fillArrayWithNumbers = (n) => {
   const arr = Array.apply(null, Array(n));
   return arr.map((_, i) => {
     return i;
@@ -9,10 +10,8 @@ const fillArrayWithNumbers = n => {
 };
 
 const Container = styled.div`
-  position: fixed;
-  bottom: 10px;
+  margin: 2em;
   display: flex;
-  width: 100%;
   justify-content: center;
   align-items: center;
   z-index: 1;
@@ -56,7 +55,11 @@ const PacmanFood = styled.div`
   display: inline-block;
 `;
 
-const Steps = ({ length, position }) => {
+const Pacman = () => {
+  const { length, index } = useDeck();
+
+  const position = index + 1;
+
   return (
     <Container>
       <PacmanContainer>
@@ -70,11 +73,11 @@ const Steps = ({ length, position }) => {
         )}
       </PacmanContainer>
 
-      {fillArrayWithNumbers(length - position).map(i => (
+      {fillArrayWithNumbers(length - position).map((i) => (
         <PacmanFood key={`food-${i}`} />
       ))}
     </Container>
   );
 };
 
-export default Steps;
+export default Pacman;
