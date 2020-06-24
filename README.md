@@ -14,16 +14,22 @@ or
 yarn add mdx-deck-theme-awesomeness
 ```
 
-## Usage
-
-To use it, you have to call the `awesomeTheme` function. If you want it to have your profile on the bottom-left, you must pass `name` and `twitter` to it.
-
 ## Example
 
 ```js
-import awesomeTheme from "mdx-deck-theme-awesomeness";
+import { awesomeTheme, Pacman, Profile } from "mdx-deck-theme-awesomeness";
 
-export const themes = [
-  awesomeTheme({ name: "Pedro Filho", twitter: "pedrofilhome" })
-];
+export const theme = awesomeTheme;
+
+<Header>
+
+<Profile name="Pedro Filho" twitter="pedrofilhome" />
+
+</Header>
+
+<Footer>
+
+<Pacman />
+
+</Footer>
 ```
